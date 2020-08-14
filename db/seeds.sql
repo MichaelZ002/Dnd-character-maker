@@ -1,0 +1,1 @@
+INSERT INTO characters (character_name) VALUES (""), (""), ("",false);
