@@ -12,11 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-<<<<<<< HEAD
-const routes = require('./controllers/dnd_controllers');
-=======
 const routes = require('./controllers/dnd_controller');
->>>>>>> 354c37ccf3f625d5fabc9041319c20e7b511bfb6
 app.use(routes);
 <<<<<<< HEAD
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
