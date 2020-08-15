@@ -26,5 +26,20 @@ $(document).ready(function() {
         }
     }) 
     })
+    const raceSelect = $("#race")
+    raceSelect.on('change',function(event){
+        const raceName = $(this).val() 
+        console.log(raceName)
+    $.ajax({ 
+        url: queryURL + "race/" + r,
+        type: "GET",
+        success: function (result){
+            console.log(result)
+        },
+        error: function(error){
+            console.log(error);
+        }
+    }) 
+    })
   
 })
