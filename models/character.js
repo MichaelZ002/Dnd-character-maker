@@ -5,6 +5,7 @@ module.exports = function(sequelize, DataTypes){
         race: DataTypes.STRING,
         age: DataTypes.INTEGER,
         height: DataTypes.STRING,
+        image: DataTypes.STRING,
         primary_language: DataTypes.STRING,
         weapons: {
             type: DataTypes.STRING, 

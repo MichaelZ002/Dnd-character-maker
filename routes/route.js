@@ -3,8 +3,12 @@ var db = require("../models");
 
 // routes
 
-module.exports = function(app) {
-    app.get('')
+module.exports = function (app) {
+    app.get('/api/characters', function (req, res) {
+        db.Character.findAll().then(function (results) {
+            res.json(results)
+        })
+    })
 
 
 

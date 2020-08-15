@@ -1,0 +1,16 @@
+{{!-- {{The main title}} --}}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <div class="col-sm-12">
+            <h1 class="display-4">D&D All Characters</h1>
+        </div>
+    </div>
+</div>
+
+{{!-- {{The main title}} --}}
+<div class="container">
+    {{#each characters}}
+    <button class="characterBtn">{{dataValues.name}}</button> <br>
+    {{/each}}
+</div>
+
