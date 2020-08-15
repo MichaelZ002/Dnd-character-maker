@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MichaelZ002/project-two-group-zero#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
     "handlebars": "^4.7.6",
     "mysql": "^2.18.1",
     "sequelize": "^6.3.4"
