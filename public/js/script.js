@@ -10,21 +10,69 @@ $(document).ready(function () {
             console.log(error);
         }
     })
+    //for class
+    const classSelect = $("#class")
+    classSelect.on('change',function(event){
+        const className = $(this).val() 
+        console.log(className)
+    $.ajax({ 
+        url: queryURL + "class/" + className,
+        type: "GET",
+        success: function (result){
+            console.log(result)
+        },
+        error: function(error){
+            console.log(error);
+        }
+    }) 
+    }) 
     //for spells
     const spellSelect = $("#spells")
-    spellSelect.on('change', function (event) {
-        const spellname = $(this).val()
+    spellSelect.on('change',function(event){
+        const spellName = $(this).val() 
+        console.log(spellName)
+    $.ajax({ 
+        url: queryURL + "spells/" + spellName,
+        type: "GET",
+        success: function (result){
+            console.log(result)
+        },
+        error: function(error){
+            console.log(error);
+        }
+    }) 
+    })
+    //for races
+    const raceSelect = $("#race")   
+    raceSelect.on('change',function(event){
+        const raceName = $(this).val() 
+        console.log(raceName)
+    $.ajax({ 
+        url: queryURL + "race/" + raceName,
+        type: "GET",
+        success: function (result){
+            console.log(result)
+        },
+        error: function(error){
+            console.log(error);
+        }
+    }) 
+    })
+    //to select languages
+    const langSelect = $("#lang")
+    langSelect.on('change',function(event){
+        const langName = $(this).val() 
         console.log(spellname)
-        $.ajax({
-            url: queryURL + "spells/" + spellname,
-            type: "GET",
-            success: function (result) {
-                console.log(result)
-            },
-            error: function (error) {
-                console.log(error);
-            }
-        })
+    $.ajax({ 
+        url: queryURL + "languages/" + langName,
+        type: "GET",
+        success: function (result){
+            console.log(result)
+        },
+        error: function(error){
+            console.log(error);
+        }
+    }) 
     })
 
 })
