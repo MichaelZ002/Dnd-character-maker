@@ -48,7 +48,7 @@ $(document).ready(function() {
         const raceName = $(this).val() 
         console.log(raceName)
     $.ajax({ 
-        url: queryURL + "race/" + lanName,
+        url: queryURL + "race/" + raceName,
         type: "GET",
         success: function (result){
             console.log(result)
@@ -64,7 +64,7 @@ $(document).ready(function() {
         const langName = $(this).val() 
         console.log(spellname)
     $.ajax({ 
-        url: queryURL + "lnguages/" + spellname,
+        url: queryURL + "languages/" + langName,
         type: "GET",
         success: function (result){
             console.log(result)
