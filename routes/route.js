@@ -4,7 +4,7 @@ var db = require("../models");
 // routes
 
 module.exports = function(app) {
-
+    app.get('')
 
 
 
