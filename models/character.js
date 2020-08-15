@@ -1,12 +1,29 @@
 module.exports = function(sequelize, DataTypes){
     const Character = sequelize.define("Character", {
-        name: DataTypes.STRING, 
-        class: DataTypes.STRING, 
-        race: DataTypes.STRING,
-        age: DataTypes.INTEGER,
-        height: DataTypes.STRING,
-        image: DataTypes.STRING,
-        primary_language: DataTypes.STRING,
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+            }, 
+        class: {
+            type: DataTypes.STRING,
+            allowNull: false
+            }, 
+        race: {
+            type: DataTypes.STRING,
+            allowNull: false
+            },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+            },
+        height: {
+            type: DataTypes.STRING,
+            allowNull: false
+            },
+        primary_language: {
+            type: DataTypes.STRING,
+            allowNull: false
+            },
         weapons: {
             type: DataTypes.STRING, 
             get: function() {

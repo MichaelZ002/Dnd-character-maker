@@ -7,10 +7,26 @@
     </div>
 </div>
 
-{{!-- {{The main title}} --}}
-<div class="container">
-    {{#each characters}}
-    <button class="characterBtn">{{dataValues.name}}</button> <br>
-    {{/each}}
-</div>
 
+{{!-- {{Character information card}} --}}
+
+<div class="container">
+    {{#each character}}
+    <div class="row">
+        <div class="card character-card">
+            <div class="card-header">
+                <h2 class="card-title">{{ name }} </h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Class: {{class}} </li>
+                    <li class="list-group-item">Race: {{race}} </li>
+                    <li class="list-group-item">Age: {{age}} </li>
+                    <li class="list-group-item">Height {{height}} </li>
+                    <li class="list-group-item">Primary Language: {{primary_language}} </li>
+                    <li class="list-group-item">Weapons: {{weapons}} </li>
+                </ul>
+            </div>
+        </div>
+    {{/each}}
+    </div>
