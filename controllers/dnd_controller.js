@@ -16,7 +16,7 @@ router.get('/characters', function (req, res) {
     })
 })
 
-router.get("/character/:name", (req, res) => {
+router.get("/:name", (req, res) => {
     let id = req.param.name
     const found = db.character.find(character => character.name === targetChar)
     res.render("character", found )
