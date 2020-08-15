@@ -3,6 +3,9 @@ module.exports = function(sequelize, DataTypes){
         name: DataTypes.STRING, 
         class: DataTypes.STRING, 
         race: DataTypes.STRING,
+        age: DataTypes.INTEGER,
+        height: DataTypes.STRING,
+        primary_language: DataTypes.STRING,
         weapons: {
             type: DataTypes.STRING, 
             get: function() {
