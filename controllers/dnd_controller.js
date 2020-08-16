@@ -18,7 +18,7 @@ router.get("/characters", function (req, res) {
 
 router.get("/:name", (req, res) => {
   let name = req.param.name;
-  const found = db.Character.find((data) => data.name === name);
+  const found = db.Character.findOne({where: { name }});
   res.render("character", found);
 });
 module.exports = router;
