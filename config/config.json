@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "garcia",
-    "database": "characters",
+    "database": "characters_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
