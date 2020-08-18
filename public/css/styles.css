@@ -3,6 +3,7 @@
     float: right;
     padding: 5px;
 }
+
 #char-name-head{
     padding: 70px
 }
@@ -17,4 +18,38 @@
 
 .build-sheet-info{
     font-size: 20px;
+}
+
+.jumbotron-style {
+    background-color: #9d0a0e;
+    font-family: 'Libre Baskerville', serif;
+    color: #979AA4;
+
+}
+
+body {
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.15), 
+        rgba(0, 0, 0, 0.85)
+      ), url(https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h2 {
+    color:white;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.first-column {
+    padding-left:10%
+}
+
+
+.second-column {
+    padding-left: 10%
 }

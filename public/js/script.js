@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const queryURL = "https://www.dnd5eapi.co/api/";
-    $.ajax({ 
+    $.ajax({
         url: queryURL,
         type: "GET",
-        success: function (result){
+        success: function (result) {
             console.log(result)
         },
-        error: function(error){
+        error: function (error) {
             console.log(error);
         }
     })
@@ -74,5 +74,5 @@ $(document).ready(function() {
         }
     }) 
     })
-  
+
 })
