@@ -1,47 +1,35 @@
 {{!-- {{The main title}} --}}
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid jumbotron-style text-center">
     <div class="container">
-        <div class="col-sm-12"> <h1 class="display-4">Character Build</h1>
+        <div class="col-sm-12">
+            <h1 class="display-4">Character Build</h1>
         </div>
     </div>
 </div>
 
-{{!-- {{Image}} --}}
-
-<div class="container">
-    <div class="col-sm-12 text-center">
-        <img src="https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png" />
-    </div>
-</div>
 
 {{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
 
+{{!-- {{Column 1}} --}}
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6 first-column">
         <h2>Start a New Character</h2>
-        <input id="input" placeholder="  Enter character name">
+        <input id="input" placeholder="  Enter character {{name}}">
+        <br>
+        <br>
+        <fieldset>
+            <select id="spells" name="spells">
+                <br>
+                <br>
+                <option value="---"> Select spells</option>
+                <option value="Acid-arrow"> Acid arrow</option>
+                <option value="Fireball"> Fireball</option>
+            </select>
+        </fieldset>
+    </div>
 
-        <select id="spells">
-            <option value ="Acid-arrow"> Acid arrow</option>
-            <option value="Fireball"> Fireball</option>
-        </select>
+    {{!-- {{Column 2}} --}}
+    <div class="col-sm-6 second-column">
+        <h2>Load Previous Builds </h2>
     </div>
 </div>
-
-<div class="col-sm-6">
-    <h2>Load Previous Builds</h2>
-    <ul>
-        <li>
-
-    </div>
-    <div class="col-sm-6">
-        <h2>Load Previous Builds</h2>
-        <ul>
-        
-            
-            <li>
-
-            </li>
-        </ul>
-
-    </div>
