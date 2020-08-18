@@ -1,35 +1,37 @@
 {{!-- {{The main title}} --}}
-<div class="jumbotron jumbotron-fluid jumbotron-style text-center">
-    <div class="container">
-        <div class="col-sm-12">
-            <h1 class="display-4">Character Build</h1>
+<div id="main">
+    <div class="jumbotron jumbotron-fluid jumbotron-style text-center">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="display-4">Character Build</h1>
+            </div>
         </div>
     </div>
-</div>
 
 
-{{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
+    {{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
 
-{{!-- {{Column 1}} --}}
-<div class="row">
-    <div class="col-sm-6 first-column">
-        <h2>Start a New Character</h2>
-        <input id="input" placeholder="  Enter character {{name}}">
-        <br>
-        <br>
-        <fieldset>
-            <select id="spells" name="spells">
-                <br>
-                <br>
-                <option value="---"> Select spells</option>
-                <option value="Acid-arrow"> Acid arrow</option>
-                <option value="Fireball"> Fireball</option>
-            </select>
-        </fieldset>
-    </div>
+    {{!-- {{Column 1}} --}}
+    <div class="row">
+        <div class="col-sm-6 first-column">
+            <h2>Start a New Character</h2>
+            <input id="input" placeholder="  Enter character {{name}}">
+            <br>
+            <br>
+            <fieldset>
+                <select id="spells" name="spells">
+                    <br>
+                    <br>
+                    <option value="---"> Select spells</option>
+                    <option value="Acid-arrow"> Acid arrow</option>
+                    <option value="Fireball"> Fireball</option>
+                </select>
+            </fieldset>
+        </div>
 
-    {{!-- {{Column 2}} --}}
-    <div class="col-sm-6 second-column">
-        <h2>Load Previous Builds </h2>
+        {{!-- {{Column 2}} --}}
+        <div class="col-sm-6 second-column">
+            <h2>Load Previous Builds </h2>
+        </div>
     </div>
 </div>
