@@ -1,8 +1,23 @@
 #d-d-pic {
-    max-width: 50%;
-};
-#character-header {
+    max-width: 70%;
     float: right;
+    padding: 5px;
+}
+
+#char-name-head{
+    padding: 70px
+}
+#char-name{
+    font-family: 'Cinzel Decorative';
+    font-size: 60px;
+    font-weight: 800;
+}
+#build-info{
+    padding-left:30px;
+}
+
+.build-sheet-info{
+    font-size: 20px;
 }
 
 .jumbotron-style {
@@ -38,4 +53,3 @@ h2 {
 .second-column {
     padding-left: 10%
 }
-
