@@ -1,3 +1,5 @@
+
+
 {{!-- {{The main title}} --}}
 <div class="jumbotron jumbotron-fluid jumbotron-style">
     <div class="container text-center">
@@ -7,10 +9,8 @@
     </div>
 </div>
 
-
-
 <div class="container">
-    {{#each Characters}}
+    {{#each Character}}
     <div class="row">
         <div class="card character-card">
             <div class="card-header">
@@ -29,3 +29,7 @@
         </div>
     {{/each}}
     </div>
+
+    <script>
+        characters: {class: "human"}
+    </script>
