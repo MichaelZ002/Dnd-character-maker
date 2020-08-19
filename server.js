@@ -14,13 +14,9 @@ app.use(express.static("public"));
 
 const routes = require('./controllers/dnd_controller');
 app.use(routes);
-<<<<<<< HEAD
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars"); 
 app.use(express.static("public"));
-=======
-
->>>>>>> 9fd28f2d04107fb286add13269a7c88a676598b6
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Great Success!`);
