@@ -18,6 +18,7 @@ router.get("/characters", function (req, res) {
 
 router.get("/:name", async function(req, res){
   let name = req.params.name;
+  console.log(name)
   const found = await db.Character.findOne({where: { name }});
   console.log(found)
   res.render("character", found);
