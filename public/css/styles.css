@@ -35,6 +35,12 @@
     height: 100%;    
     padding: 0;
     margin: 0;
+    padding-bottom: 100px;
+}
+
+#build-info{
+    font-family: 'Cinzel Decorative';
+    padding-top: 20px;
 }
 
 #main {
