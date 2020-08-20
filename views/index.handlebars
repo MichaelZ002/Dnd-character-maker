@@ -16,26 +16,26 @@
 </div>
 
 {{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
-
+<script></script>
 <div class="row">
     <div class="col-sm-6">
         <h2>Start a New Character</h2>
         <input id="input" placeholder="  Enter character name">
 
-        <select id="Class">
-            <option value =""> Class </option>
+        <select id="class">
+            <option value ="Class" {{ #each }}> Class </option>
              </select>
        
-        <select id="Spell">
-            <option value =""> Spells </option>
+        <select id="spell">
+            <option value ="Spells"{{ #each }}> Spells </option>
              </select>
 
         <select id="race">
-            <option value =""> Race </option>
+            <option value ="Race"{{ #each }}> Race </option>
              </select>
         
         <select id="lang">
-            <option value =""> Languages </option>
+            <option value ="Languages"{{ #each }} > Languages </option>
             
         </select>
     </div>
