@@ -1,16 +1,22 @@
 
+    {{!-- {{The main title}} --}}
 
-{{!-- {{The main title}} --}}
-<div class="jumbotron jumbotron-fluid jumbotron-style">
-    <div class="container text-center">
-        <div class="col-sm-12">
-            <h1 class="display-4">D&D All Characters</h1>
+<div id="character-page">
+    <div class="jumbotron-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 class="text-center display-4">All Characters</h2>
+            </div>
+            <div class="col-sm-4">
+                <div id="picture"><img id="d-d-pic" src="/dungeons-dragons-logo.jpg" alt="Dungeons & Dragons" />
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    {{#each Character}}
+    {{#each character}}
     <div class="row">
         <div class="card character-card">
             <div class="card-header">
