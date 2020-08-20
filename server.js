@@ -11,10 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-
 const routes = require('./controllers/dnd_controller');
 app.use(routes);
-
+app.use(express.static("public"));
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Great Success!`);
