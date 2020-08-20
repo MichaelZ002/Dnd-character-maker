@@ -1,6 +1,6 @@
 {{!-- {{The main title}} --}}
 <div id="main">
-    <div class="jumbotron jumbotron-fluid jumbotron-style text-center">
+    <div class="jumbotron jumbotron-fluid jumbotron-style text-center" style="padding-top: 1.5rem; padding-bottom: 1.5rem">
         <div class="container">
             <div class="col-sm-12">
                 <h1 class="display-4">Character Build</h1>
@@ -9,29 +9,39 @@
     </div>
 
 
-    {{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
-
-    {{!-- {{Column 1}} --}}
-    <div class="row">
-        <div class="col-sm-6 first-column">
-            <h2>Start a New Character</h2>
-            <input id="input" placeholder="  Enter character {{name}}">
-            <br>
-            <br>
-            <fieldset>
-                <select id="spells" name="spells">
-                    <br>
-                    <br>
-                    <option value="---"> Select spells</option>
-                    <option value="Acid-arrow"> Acid arrow</option>
-                    <option value="Fireball"> Fireball</option>
-                </select>
-            </fieldset>
-        </div>
-
-        {{!-- {{Column 2}} --}}
-        <div class="col-sm-6 second-column">
-            <h2>Load Previous Builds </h2>
-        </div>
+<div class="container">
+    <div class="col-sm-12 text-center">
+        <img src="https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png" />
     </div>
+</div>
+
+{{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
+
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Start a New Character</h2>
+        <input id="input" placeholder="  Enter character name">
+
+        <select id="Class">
+            <option value =""> Class </option>
+             </select>
+       
+        <select id="Spell">
+            <option value =""> Spells </option>
+             </select>
+
+        <select id="race">
+            <option value =""> Race </option>
+             </select>
+        
+        <select id="lang">
+            <option value =""> Languages </option>
+            
+        </select>
+    </div>
+</div>
+
+<div class="col-sm-6">
+    <h2>Load Previous Builds</h2>
+    
 </div>
