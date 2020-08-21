@@ -19,34 +19,40 @@
     </div>
 
     {{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
-    <script></script>
+    
     <div class="row">
         <div class="col-sm-6">
             <h2>Start a New Character</h2>
             <input id="input" placeholder="  Enter character name">
-
+{{!-- 
             <select id="class">
                 <option>
                 {{#each classes}}
-                <option value="{{this}}">{{this.classes}}</option>
+                <option value="{{this.classes}}">{{this.classes}}</option>
                 {{/each}}
                 </option>
-            </select>
+            </select>  --}}
+             
 
-            {{!-- <select id="class">
-            <option value ="class" {{#each this }}> Class </option>
+            <select id="class">
+            <option value ="class"> class </option>
+             </select>
+            <script> console.log()</script>
+            
+
+            {{!-- {{!-- <select id="spell">
+            <option value ="spells"{{#each this }}> Spells </option>
              </select> --}}
 
-            {{!-- <select id="spell">
-            <option value ="spells"{{#each this }}> Spells </option>
-             </select>
-
         <select id="race">
-            <option value ="race"{{#each this }}> Race </option>
+            <option value ="race"{{ this }}> Race </option>
              </select>
         
         <select id="lang">
-            <option value ="languages"{{#each this } > Languages </option> --}}
+            <option value ="languages"{{ this }} > Languages </option> 
+            <option> Common </option>
+            <option> Elvish </option>
+            <option> Undercommon </option>
 
             </select>
 

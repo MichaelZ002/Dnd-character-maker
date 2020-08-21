@@ -12,14 +12,14 @@ $(document).ready(function () {
     })
     //for class
     const classSelect = $("#class")
-    classSelect.on('change',function(event){
+    classSelect.on('click',function(event){
         const className = $(this).val() 
         console.log(className)
     $.ajax({ 
         url: queryURL + "classes/",
         type: "GET",
         success: function (result){
-            console.log(result)
+            console.log(result.results)
         },
         error: function(error){
             console.log(error);
