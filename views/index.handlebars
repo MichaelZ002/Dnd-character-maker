@@ -1,0 +1,60 @@
+{{!-- {{The main title}} --}}
+<div id="main">
+    <div class="jumbotron jumbotron-fluid jumbotron-style text-center"
+        style="padding-top: 1.5rem; padding-bottom: 1.5rem">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="display-4">Character Build</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="col-sm-12 text-center">
+            <img src="https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png" />
+        </div>
+    </div>
+
+    {{!-- {{Two separate columns which consist of new character build option (column 1) and previous characters (column2) }} --}}
+    <script></script>
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Start a New Character</h2>
+            <input id="input" placeholder="  Enter character name">
+
+            <select id="class">
+                <option>
+                {{#each classes}}
+                <option value="{{this}}">{{this.classes}}</option>
+                {{/each}}
+                </option>
+            </select>
+
+            {{!-- <select id="class">
+            <option value ="class" {{#each this }}> Class </option>
+             </select> --}}
+
+            {{!-- <select id="spell">
+            <option value ="spells"{{#each this }}> Spells </option>
+             </select>
+
+        <select id="race">
+            <option value ="race"{{#each this }}> Race </option>
+             </select>
+        
+        <select id="lang">
+            <option value ="languages"{{#each this } > Languages </option> --}}
+
+            </select>
+
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <h2>Load Previous Builds</h2>
+
+    </div>
+    <script src="js/script.js"> </script>
