@@ -1,7 +1,7 @@
 #d-d-pic {
     max-width: 70%;
     float: right;
-    padding: 5px;
+    padding-right:0;
 }
 
 #char-name-head{

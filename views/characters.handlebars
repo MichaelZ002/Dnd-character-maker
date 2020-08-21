@@ -1,38 +1,31 @@
-
-
 {{!-- {{The main title}} --}}
 
-<div id="character-page">
-    <div class="jumbotron-fluid">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2 class="text-center display-4">All Characters</h2>
-            </div>
-            <div class="col-sm-4">
-                <div id="picture"><img id="d-d-pic" src="/dungeons-dragons-logo.jpg" alt="Dungeons & Dragons" />
-                </div>
-            </div>
-        </div>
-    </div>
+
+<div class="jumbotron-fluid" id="character-page">
+    <h2 class="text-center display-4" style:"padding-top: 1.5 rem">All Characters</h2>
 </div>
 
-<div class="container">
-    {{#each character}}
-    <div class="row">
-        <div class="card character-card">
-            <div class="card-header">
-                <h2 class="card-title">{{ dataValues.name }} </h2>
+<br>
+<br>
+<div class="card-deck" style="width: 23rem" ;>
+    <div class="container">
+        {{#each character}}
+        <div class="row">
+            <div class="card character-card">
+                <div class="card-header"> 
+                    <h2 class="card-title">{{ dataValues.name }} <img src="https://img.icons8.com/color/48/000000/dungeons-and-dragons.png"/></h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Class: {{dataValues.class}} </li>
+                        <li class="list-group-item">Race: {{dataValues.race}} </li>
+                        <li class="list-group-item">Age: {{dataValues.age}} </li>
+                        <li class="list-group-item">Height {{dataValues.height}} </li>
+                        <li class="list-group-item">Primary Language: {{dataValues.primary_language}} </li>
+                        <li class="list-group-item">Weapons: {{dataValues.weapons}} </li>
+                    </ul>
+                </div>
             </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">Class: {{dataValues.class}} </li>
-                    <li class="list-group-item">Race: {{dataValues.race}} </li>
-                    <li class="list-group-item">Age: {{dataValues.age}} </li>
-                    <li class="list-group-item">Height {{dataValues.height}} </li>
-                    <li class="list-group-item">Primary Language: {{dataValues.primary_language}} </li>
-                    <li class="list-group-item">Weapons: {{dataValues.weapons}} </li>
-                </ul>
-            </div>
+            {{/each}}
         </div>
-    {{/each}}
     </div>
