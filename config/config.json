@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Ilhanirem51",
-    "database": "characters_db",
+    "password": "garcia",
+    "database": "characters_db", 
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

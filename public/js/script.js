@@ -12,14 +12,14 @@ $(document).ready(function () {
     })
     //for class
     const classSelect = $("#class")
-    classSelect.on('change',function(event){
+    classSelect.on('click',function(event){
         const className = $(this).val() 
         console.log(className)
     $.ajax({ 
-        url: queryURL + "class/" + className,
+        url: queryURL + "classes/",
         type: "GET",
         success: function (result){
-            console.log(result)
+            console.log(result.results)
         },
         error: function(error){
             console.log(error);
@@ -32,7 +32,7 @@ $(document).ready(function () {
         const spellName = $(this).val() 
         console.log(spellName)
     $.ajax({ 
-        url: queryURL + "spells/" + spellName,
+        url: queryURL + "spells/",
         type: "GET",
         success: function (result){
             console.log(result)
@@ -48,7 +48,7 @@ $(document).ready(function () {
         const raceName = $(this).val() 
         console.log(raceName)
     $.ajax({ 
-        url: queryURL + "race/" + raceName,
+        url: queryURL + "race/",
         type: "GET",
         success: function (result){
             console.log(result)
@@ -64,7 +64,7 @@ $(document).ready(function () {
         const langName = $(this).val() 
         console.log(spellname)
     $.ajax({ 
-        url: queryURL + "languages/" + langName,
+        url: queryURL + "languages/",
         type: "GET",
         success: function (result){
             console.log(result)
