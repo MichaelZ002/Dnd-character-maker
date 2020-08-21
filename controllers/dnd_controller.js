@@ -19,4 +19,10 @@ router.get("/:name", async function(req, res){
   console.log(found)
   res.render("character", found);
 });
+
+router.get("/:classes", async function(req, res){
+  let name = req.params.classes;
+  console.log(classes)
+  res.render("classes")
+});
 module.exports = router;
