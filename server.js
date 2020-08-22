@@ -12,10 +12,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 const routes = require("./controllers/dnd_controller");
 app.use(routes);
 app.use(express.static("public"));
+
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Great Success!`);
