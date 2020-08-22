@@ -7,28 +7,24 @@
 
 <br>
 <br>
-<div class="card-deck" style="width: 23rem" ;>
-    <div class="container">
-        {{#each character}}
-        <div class="row">
-            <div class="card character-card">
-                <div class="card-header">
-                    <h2 class="card-title">{{ dataValues.name }} <img
-                            src="https://img.icons8.com/color/48/000000/dungeons-and-dragons.png" /></h2>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">Class: {{dataValues.class}} </li>
-                        <li class="list-group-item">Race: {{dataValues.race}} </li>
-                        <li class="list-group-item">Age: {{dataValues.age}} </li>
-                        <li class="list-group-item">Height {{dataValues.height}} </li>
-                        <li class="list-group-item">Primary Language: {{dataValues.primary_language}} </li>
-                        <li class="list-group-item">Weapons: {{dataValues.weapons}} </li>
-                    </ul>
-                </div>
-            </div>
-            {{/each}}
+<div class="card-group" style="width: 50rem";>
+    {{#each character}}
+    <div class="card character-card">
+        <div class="card-header center">
+            <h2 class="card-title">{{ dataValues.name }} <img
+                    src="https://img.icons8.com/color/48/000000/dungeons-and-dragons.png" /></h2>
+        </div>
+        <div class="card-body center">
+            <ul class="list-group">
+                <li class="list-group-item">Class: {{dataValues.class}} </li>
+                <li class="list-group-item">Race: {{dataValues.race}} </li>
+                <li class="list-group-item">Age: {{dataValues.age}} </li>
+                <li class="list-group-item">Height {{dataValues.height}} </li>
+                <li class="list-group-item">Primary Language: {{dataValues.primary_language}} </li>
+                <li class="list-group-item">Weapons: {{dataValues.weapons}} </li>
+            </ul>
         </div>
     </div>
-    <script src="js/script.js"> </script>
-    <script src="js/add.js" type="text/javascript"></script> characters
+    {{/each}}
+</div>
+<script src="js/script.js"> </script>
