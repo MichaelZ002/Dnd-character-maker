@@ -1,11 +1,12 @@
 #d-d-pic {
-    max-width: 70%;
+    max-width: 20%;
     float: right;
     padding-right:0;
+    padding-bottom:10px;
 }
 
 #char-name-head{
-    padding: 70px
+    padding:20px;
 }
 #char-name{
     font-family: 'Cinzel Decorative';
@@ -14,6 +15,7 @@
 }
 #build-info{
     padding-left:30px;
+    padding-top:100px;
 }
 
 .build-sheet-info{
@@ -26,6 +28,9 @@
     color: #979AA4;
 
 }
+.clearfix {
+    overflow: auto;
+  }
 
 #character-page{
     background:linear-gradient(
@@ -39,10 +44,16 @@
     padding-bottom: 100px;
 }
 
-#build-info{
+.build-info{
     font-family: 'Cinzel Decorative';
-    padding-top: 20px;
+    padding:5px;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 #characters-page {
     background:linear-gradient(
@@ -84,11 +95,8 @@ h2 {
 
 li{
     font-family: 'Cinzel Decorative';
-    
 }
 
 .card-header {
     background-color: #6C757D
-
 }
-
