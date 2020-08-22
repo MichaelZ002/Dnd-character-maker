@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>D&D Character Build</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!--Link to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="jumbotron jumbotron-fluid jumbotron-style text-center"
+            style="padding-top: 1.5rem; padding-bottom: 1.5rem">
+            <div class="container">
+                <div class="col-sm-12">
+                    <h1 class="display-4">Character Build</h1>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="col-sm-12 text-center">
+                <img src="https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Start a New Character</h2>
+                <input id="name" placeholder="Enter character name">
+                <select id="class">
+                    <option id="class-option" value="class"> class </option>
+                </select>
+                <select id="spells">
+                    <option id="spell-option" value="spells"> Spells </option>
+                </select>
+                <select id="race">
+                    <option id="race-option" value="race"> Race </option>
+                </select>
+                <select id="lang">
+                    <option id="lang-option" value="languages"> Languages </option>
+                </select>
+                <input id="age" placeholder="Enter character age">
+                <input id="height" placeholder="Enter character height">
+                <button class="btn-floating">
+                    <i class="material-icons">Submit</i>
+                </button>
+    
+            </div>
+            <div class="col-sm-6">
+                <h2>Load Previous Builds</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

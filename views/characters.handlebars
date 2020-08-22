@@ -1,33 +1,30 @@
-
-
 {{!-- {{The main title}} --}}
-<div class="jumbotron jumbotron-fluid jumbotron-style">
-    <div class="container text-center">
-        <div class="col-sm-12">
-            <h1 class="display-4">D&D All Characters</h1>
-        </div>
-    </div>
+
+
+<div class="jumbotron-fluid" id="character-page">
+    <h2 class="text-center display-4" style:"padding-top: 1.5 rem">All Characters</h2>
 </div>
 
-<div class="container">
+<br>
+<br>
+<div class="card-deck" style="width: 23rem" ;>
     {{#each character}}
-    <div class="row">
-        <div class="card character-card">
-            <div class="card-header">
-                <h2 class="card-title">{{ dataValues.name }} </h2>
-            </div>
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item">Class: {{dataValues.class}} </li>
-                    <li class="list-group-item">Race: {{dataValues.race}} </li>
-                    <li class="list-group-item">Age: {{dataValues.age}} </li>
-                    <li class="list-group-item">Height {{dataValues.height}} </li>
-                    <li class="list-group-item">Primary Language: {{dataValues.primary_language}} </li>
-                    <li class="list-group-item">Weapons: {{dataValues.weapons}} </li>
-                </ul>
-            </div>
+    <div class="card character-card">
+        <div class="card-header center">
+            <h2 class="card-title">{{ dataValues.name }} <img
+                    src="https://img.icons8.com/color/48/000000/dungeons-and-dragons.png" /></h2>
         </div>
-    {{/each}}
+        <div class="card-body center">
+            <ul class="list-group">
+                <li class="list-group-item">Class: {{dataValues.class}} </li>
+                <li class="list-group-item">Race: {{dataValues.race}} </li>
+                <li class="list-group-item">Age: {{dataValues.age}} </li>
+                <li class="list-group-item">Height {{dataValues.height}} </li>
+                <li class="list-group-item">Primary Language: {{dataValues.primary_language}} </li>
+                <li class="list-group-item">Weapons: {{dataValues.weapons}} </li>
+            </ul>
+        </div>
+        {{/each}}
     </div>
-
-   
+</div>
+<script src="js/script.js"> </script>

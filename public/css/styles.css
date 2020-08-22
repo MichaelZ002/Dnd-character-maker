@@ -1,72 +1,94 @@
 #d-d-pic {
-    max-width: 70%;
-    float: right;
-    padding: 5px;
+  max-width: 20%;
+  float: right;
+  padding-right: 0;
+  padding-bottom: 10px;
 }
 
-#char-name-head{
-    padding: 70px
+#char-name-head {
+  padding: 20px;
 }
-#char-name{
-    font-family: 'Cinzel Decorative';
-    font-size: 60px;
-    font-weight: 800;
+#char-name {
+  font-family: "Cinzel Decorative";
+  font-size: 60px;
+  font-weight: 800;
 }
-#build-info{
-    padding-left:30px;
+#build-info {
+  padding-left: 30px;
+  padding-top: 100px;
 }
 
-.build-sheet-info{
-    font-size: 20px;
+.build-sheet-info {
+  font-size: 20px;
 }
 
 .jumbotron-style {
-    background-color: #9d0a0e;
-    font-family: 'Cinzel Decorative';
-    color: #979AA4;
-
+  background-color: #9d0a0e;
+  font-family: "Cinzel Decorative";
+  color: #979aa4;
+}
+.clearfix {
+  overflow: auto;
 }
 
-#character-page{
-    background:linear-gradient(
-        rgba(0, 0, 0, 0.15), 
-        rgba(0, 0, 0, 0.85));
-    width: 100%;
-    height: 100%;    
-    padding: 0;
-    margin: 0;
-    padding-right: 20px;
-    padding-bottom: 100px;
+#character-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85));
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  padding-right: 20px;
+  padding-bottom: 100px;
 }
 
-#build-info{
-    font-family: 'Cinzel Decorative';
-    padding-top: 20px;
+.build-info {
+  font-family: "Cinzel Decorative";
+  padding: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#characters-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85));
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #main {
-    background:linear-gradient(
-        rgba(0, 0, 0, 0.15), 
-        rgba(0, 0, 0, 0.85)
-      ), url(https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85)),
+    url(https://img.pngio.com/so-you-want-to-play-dungeons-dragons-dungeons-dragons-60-png-480_320.png);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h2 {
-    color:white;
-    font-family: 'Cinzel Decorative';
+  color: white;
+  font-family: "Cinzel Decorative";
 }
 
 .first-column {
-    padding-left:10%
+  padding-left: 10%;
+  padding-top: 3rem;
 }
 
-
 .second-column {
-    padding-left: 10%
+  padding-left: 10%;
+}
+
+li {
+  font-family: "Cinzel Decorative";
+}
+
+.card-header {
+  background-color: #6c757d;
 }
