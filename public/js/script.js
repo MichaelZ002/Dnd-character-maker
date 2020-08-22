@@ -113,7 +113,7 @@ $(document).ready(function () {
         // name from name input
         name: $("#name").val().trim(),
         class: $("#class").val().trim(),
-        spells: $("#spells").val().trim(),
+        weapons: $("#spells").val().trim(),
         race: $("#race").val().trim(),
         primary_language: $("#lang").val().trim(),
         height: $("#height").val().trim(),
@@ -126,7 +126,8 @@ $(document).ready(function () {
       $.ajax({
         method: "POST",
         url: "/api/characters",
-        data: newCharacter
+        data: newCharacter,
+        dataType: "json",
       })      
     
       // empty each input box by replacing the value with an empty string
