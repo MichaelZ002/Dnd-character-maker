@@ -1,7 +1,7 @@
 # Dungeons and Dragons Character Build Application
 
-  ## Description:
- 
+  ## Description: 
+  
   ## Links:
   * [Repository](https://github.com/MichaelZ002/project-two-group-zero)
 
