@@ -1,11 +1,11 @@
 $(document).ready(function () {
     const queryURL = "https://www.dnd5eapi.co/api/";
-    let classArray = []
-    console.log(classArray)
-    let spellArray = []
-    let raceArray = []
-    let langArray = []
-    $.ajax({
+    const classArray = []
+    const spellArray = []
+    const raceArray = []
+    const langArray = []
+    
+        $.ajax({
         url: queryURL,
         type: "GET",
         success: function (result) {
@@ -23,7 +23,8 @@ $(document).ready(function () {
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    classArray.push(results.results[i].name)
+                    console.log(classArray)
                 }
             },
             error: function (index) {
@@ -40,7 +41,8 @@ $(document).ready(function () {
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    spellArray.push(results.results[i].name)
+                    console.log(spellArray)
                 }
             },
             error: function (index) {
@@ -57,7 +59,8 @@ $(document).ready(function () {
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    raceArray.push(results.results[i].name)
+                    console.log(raceArray)
                 }
             },
             error: function (index) {
@@ -74,7 +77,8 @@ $(document).ready(function () {
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    langArray.push(results.results[i].name)
+                    console.log(langArray)
                 }
             },
             error: function (index) {
@@ -83,4 +87,6 @@ $(document).ready(function () {
         })
     }
     populateLang()
+    
 })
+
