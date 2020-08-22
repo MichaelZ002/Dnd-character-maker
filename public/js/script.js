@@ -1,75 +1,66 @@
-$(document).ready(function () {
+$(document).ready( async function () {
   console.log(`script.js loaded`)
   const queryURL = "https://www.dnd5eapi.co/api/";
   const classArray = [];
   const spellArray = [];
   const raceArray = [];
   const langArray = [];
+  var allChar = [];
   nameInput = $("#name-input");
   classInput = $("#class");
   spellInput = $("#spells");
   raceInput = $("#race");
   langInput = $("#lang");
+  allCharDiv = $("#all-char")
 
-  $.ajax({
+  const result = await $.ajax({
     url: queryURL,
-    type: "GET",
-    success: function (result) {
-      console.log(result);
-    },
-    error: function (error) {
-      console.log(error);
-    },
-  });
+    type: "GET"
+  })
+
+  console.log(result)
+
   //for class
-  $.ajax({
+   const classResult = await $.ajax({
     url: queryURL + "classes/",
     type: "GET",
-    success: function (results) {
-      for (let i = 0; i < results.results.length; i++) {
-        classArray.push(results.results[i].name);
-    
-      }
-    },
-    error: function (index) {
-    },
   });
+  for (let i = 0; i < classResult.results.length; i++) {
+    classArray.push(classResult.results[i].name);
 
-  $.ajax({
+  }
+
+  const spellsResult = await $.ajax({
     url: queryURL + "spells/",
     type: "GET",
-    success: function (results) {
-      for (let i = 0; i < results.results.length; i++) {
-        spellArray.push(results.results[i].name);
-      }
-    },
-    error: function (index) {
-    },
   });
+  for (let i = 0; i < spellsResult.results.length; i++) {
+    spellArray.push(spellsResult.results[i].name);
+  }
 
-  $.ajax({
+  const raceResult = await $.ajax({
     url: queryURL + "races/",
     type: "GET",
-    success: function (results) {
-      for (let i = 0; i < results.results.length; i++) {
-        raceArray.push(results.results[i].name);
-      }
-    },
-    error: function (index) {
-    },
   });
+  for (let i = 0; i < raceResult.results.length; i++) {
+    raceArray.push(raceResult.results[i].name);
+  }
 
-  $.ajax({
+  const langResult = await $.ajax({
     url: queryURL + "languages/",
     type: "GET",
-    success: function (results) {
-      for (let i = 0; i < results.results.length; i++) {
-        langArray.push(results.results[i].name);
-      }
-    },
-    error: function (index) {
-    },
   });
+  for (let i = 0; i < langResult.results.length; i++) {
+    langArray.push(langResult.results[i].name);
+  }
+
+  $.ajax({
+    url: "/api/characters",
+    type: "GET",
+  }).then(function(response){
+    allChar = response;
+    getCharacters();
+  })
 
   function genOptions() {
 
@@ -96,13 +87,25 @@ $(document).ready(function () {
       newOption.text(langArray[i]);
       langInput.append(newOption);
     }
+
+  }
+genOptions()
+
+  
+  function getCharacters(){
+    allCharDiv.empty();
+    let loadedChar = []
+    console.log(allChar[0].name)
+    for(var i = 0; i < allChar.length; i++){
+      let currChar = $("<li>").text(allChar[i].name)
+      console.log(allChar[i])
+      currChar.attr('class', 'list-group-item prev')
+      allCharDiv.append(currChar)
+    }
+
+
   }
 
-  function waitingme(){
-      setTimeout(() => {genOptions();}, 500)
-      }
-
-    waitingme();
 
   
     $(".btn-floating").on("click", function(event) {
