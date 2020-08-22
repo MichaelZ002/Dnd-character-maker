@@ -35,7 +35,7 @@
   * Ben de Garcia. Visit Ben's [GitHub Profile](https://github.com/bdegarcia).
   * Michael Zaslavsky. Visit Michael's [GitHub Profile](https://github.com/MichaelZ002).
   * Begum Sacak. Visit Begum's [GitHub Profile](https://github.com/begumsacak).
-  * Carson Keller. Visit Begum's [GitHub Profile](https://github.com/CarsonK2112).
+  * Carson Keller. Visit Carson's [GitHub Profile](https://github.com/CarsonK2112).
 
 
 
