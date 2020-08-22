@@ -27,6 +27,8 @@ function getPDF(){
     });
 };
 
+//this was largely copied from an example that someone wrote into a jsfiddle website
+
 $("#gen").on("click", () => {
     getPDF();
 })
