@@ -1,11 +1,16 @@
 $(document).ready(function () {
     const queryURL = "https://www.dnd5eapi.co/api/";
-    let classArray = []
-    console.log(classArray)
-    let spellArray = []
-    let raceArray = []
-    let langArray = []
-    $.ajax({
+    const classArray = []
+    const spellArray = []
+    const raceArray = []
+    const langArray = []
+    nameInput = $("#name-input")
+    classInput = $("#class-option")
+    spellInput = $("#spell-option");
+    raceInput = $("#race-option");
+    langInput = $("#lang-option")
+    
+        $.ajax({
         url: queryURL,
         type: "GET",
         success: function (result) {
@@ -16,71 +21,94 @@ $(document).ready(function () {
         }
     })
     //for class
-    function populateClass() {
         $.ajax({
             url: queryURL + "classes/",
             type: "GET",
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    classArray.push(results.results[i].name)
+                    console.log(classArray)
                 }
             },
             error: function (index) {
                 console.log(index.results);
             }
         })
-    }
-    populateClass()
-    //for spells
-    function populateSpells() {
+
         $.ajax({
             url: queryURL + "spells/",
             type: "GET",
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    spellArray.push(results.results[i].name)
+                    console.log(spellArray)
                 }
+                genOptions()
             },
             error: function (index) {
                 console.log(index.results);
             }
         })
-    }
-    populateSpells()
-    //for races
-    function populateRaces() {
+
         $.ajax({
             url: queryURL + "races/",
             type: "GET",
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    raceArray.push(results.results[i].name)
+                    console.log(raceArray)
                 }
             },
             error: function (index) {
                 console.log(index.results);
             }
         })
-    }
-    populateRaces()
-    //to get languages
-    function populateLang() {
+
         $.ajax({
             url: queryURL + "languages/",
             type: "GET",
             success: function (results) { 
                 console.log(results, results.length)
                 for(let i = 0; i < results.results.length; i++){
-                    console.log(results.results[i].name)
+                    langArray.push(results.results[i].name)
+                    console.log(langArray)
                 }
             },
             error: function (index) {
                 console.log(index.results);
             }
         })
-    }
-    populateLang()
-})
+    
+
+    function genOptions(){
+
+    let newOption = $('<option>');
+        for(let i = 0; i < classArray.length; i++){
+            newOption.text(classArray[i]);
+            classInput.append(newOption)
+        }
+
+        for(let i = 0; i < spellArray.length; i++){
+            newOption.text(spellArray[i]);
+            spellInput.append(newOption)
+        }
+
+        for(let i = 0; i < raceArray.length; i++){
+            newOption.text(raceArray[i]);
+            raceInput.append(newOption)
+        }
+
+        for(let i = 0; i < langArray.length; i++){
+            newOption.text(langArray[i]);
+            langInput.append(newOption)
+        }
+    };
+
+
+    
+        
+
+    })
