@@ -24,36 +24,22 @@
         <div class="col-sm-6">
             <h2>Start a New Character</h2>
             <input id="input" placeholder="  Enter character name">
-            {{!-- 
-                            <select id="class">
-                                <option>
-                                {{#each classes}}
-                                <option value="{{this.classes}}">{{this.classes}}</option>
-                                {{/each}}
-                                </option>
-                            </select>  --}}
 
 
             <select id="class">
                 <option value="class"> class </option>
             </select>
-            <script> console.log()</script>
 
-
-            {{!-- {{!-- <select id="spell">
-                            <option value ="spells"{{#each this }}> Spells </option>
-                             </select> --}}
+            <select id="spells">
+                <option value="spells"> Spells </option>
+            </select>
 
             <select id="race">
-                <option value="race" {{ this }}> Race </option>
+                <option value="race"> Race </option>
             </select>
 
             <select id="lang">
-                <option value="languages" {{ this }}> Languages </option>
-                <option> Common </option>
-                <option> Elvish </option>
-                <option> Undercommon </option>
-
+                <option value="languages"> Languages </option>
             </select>
 
         </div>
