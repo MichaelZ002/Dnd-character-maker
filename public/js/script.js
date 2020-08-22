@@ -109,9 +109,7 @@ genOptions()
 
   
     $(".btn-floating").on("click", function(event) {
-      event.preventDefault()
     console.log(`click heard`)
-      // make a newCharacter obj
       let newCharacter = {
         // name from name input
         name: $("#name").val().trim(),
@@ -141,6 +139,7 @@ genOptions()
       $("#lang").val("");
       $("#height").val("");
       $("#age").val("");
+      location.reload()
     });
     
   
