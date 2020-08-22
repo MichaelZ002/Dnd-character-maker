@@ -1,44 +1,46 @@
-<div id="character-page">
+<div id="character-page" class="canvas-div">
     <div class="jumbotron-fluid">
-        <div class="row" id="character-header">
-            <div class="col-sm-8">
+            <div>
                 <div id="char-name-head">
                     <h4>Character Name:</h4>
                     <h1 id="char-name">{{ dataValues.name }}</h1>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div id="picture"><img id="d-d-pic" src="/dungeons-dragons-logo.jpg" alt="Dungeons & Dragons" />    
+        <div class="build-info">
+            <div class="card-deck row">
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <h4 class="build-sheet-tops">Class:</h4>
+                    <h5 class="build-sheet-info">{{dataValues.class}}</h5>
+                </div>
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <h4 class="build-sheet-tops">Race:</h4>
+                    <h5 class="build-sheet-info">{{dataValues.race}}</h5>
+                </div>
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <h4 class="build-sheet-tops">Age:</h4>
+                    <h5 class="build-sheet-info">{{dataValues.age}}</h5>
+                </div>
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <h4 class="build-sheet-tops">Height:</h4>
+                    <h5 class="build-sheet-info">{{dataValues.height}}</h5>
                 </div>
             </div>
-        </div>
-        <div id="build-info" class="card-deck row"> 
-            <div class="card text-center text-white bg-secondary mb-3">
-                <h4 class="build-sheet-tops">Class:</h4>
-                <h5 class="build-sheet-info">{{dataValues.class}}</h5>
+            <div class="card-deck row">
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <h4 class="build-sheet-tops">Primary Language:</h4>
+                    <h5 class="build-sheet-info">{{dataValues.primary_language}}</h5>
+                </div>
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <h4 class="build-sheet-tops">Weapons/Spells:</h4>
+                    <h5 class="build-sheet-info">{{dataValues.weapons}}</h5>
+                </div>
             </div>
-            <div class="card text-center text-white bg-secondary mb-3">
-                <h4 class="build-sheet-tops">Race:</h4>
-                <h5 class="build-sheet-info">{{dataValues.race}}</h5>
+            <div class="card-deck row center">
+                <button class="center" id="gen">click to generate a pdf</button>            
             </div>
-            <div class="card text-center text-white bg-secondary mb-3">
-                <h4 class="build-sheet-tops">Age:</h4>
-                <h5 class="build-sheet-info">{{dataValues.age}}</h5>
-            </div>
-            <div class="card text-center text-white bg-secondary mb-3">
-                <h4 class="build-sheet-tops">Height:</h4>
-                <h5 class="build-sheet-info">{{dataValues.height}}</h5>
-            </div>
-        </div>
-        <div class="card-deck row" id="build-info">
-            <div class="card text-center text-white bg-secondary mb-3">
-                <h4 class="build-sheet-tops">Primary Language:</h4>
-                <h5 class="build-sheet-info">{{dataValues.primary_language}}</h5>
-            </div>
-            <div class="card text-center text-white bg-secondary mb-3">
-                <h4 class="build-sheet-tops">Weapons/Spells:</h4>
-                <h5 class="build-sheet-info">{{dataValues.weapons}}</h5>
-            </div>                        
+            <img class="center" src="/dndbuild.jpg" alt="D&D Build Sheet" id="build-pic" />
         </div>
     </div>
 </div>
+
+<script src="js/pdfgenerate.js"></script>

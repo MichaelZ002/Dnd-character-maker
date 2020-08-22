@@ -1,5 +1,10 @@
 $(document).ready(function () {
     const queryURL = "https://www.dnd5eapi.co/api/";
+    let classArray = []
+    console.log(classArray)
+    let spellArray = []
+    let raceArray = []
+    let langArray = []
     $.ajax({
         url: queryURL,
         type: "GET",
@@ -11,68 +16,71 @@ $(document).ready(function () {
         }
     })
     //for class
-    const classSelect = $("#class")
-    classSelect.on('click', function (event) {
-        const className = $(this).val()
-        console.log(className)
+    function populateClass() {
         $.ajax({
             url: queryURL + "classes/",
             type: "GET",
-            success: function (result) {
-                console.log(result.results)
+            success: function (results) { 
+                console.log(results, results.length)
+                for(let i = 0; i < results.results.length; i++){
+                    console.log(results.results[i].name)
+                }
             },
-            error: function (error) {
-                console.log(error);
+            error: function (index) {
+                console.log(index.results);
             }
         })
-    })
+    }
+    populateClass()
     //for spells
-    const spellSelect = $("#spells")
-    spellSelect.on('change', function (event) {
-        const spellName = $(this).val()
-        console.log(spellName)
+    function populateSpells() {
         $.ajax({
             url: queryURL + "spells/",
             type: "GET",
-            success: function (result) {
-                console.log(result)
+            success: function (results) { 
+                console.log(results, results.length)
+                for(let i = 0; i < results.results.length; i++){
+                    console.log(results.results[i].name)
+                }
             },
-            error: function (error) {
-                console.log(error);
+            error: function (index) {
+                console.log(index.results);
             }
         })
-    })
+    }
+    populateSpells()
     //for races
-    const raceSelect = $("#race")
-    raceSelect.on('change', function (event) {
-        const raceName = $(this).val()
-        console.log(raceName)
+    function populateRaces() {
         $.ajax({
-            url: queryURL + "race/",
+            url: queryURL + "races/",
             type: "GET",
-            success: function (result) {
-                console.log(result)
+            success: function (results) { 
+                console.log(results, results.length)
+                for(let i = 0; i < results.results.length; i++){
+                    console.log(results.results[i].name)
+                }
             },
-            error: function (error) {
-                console.log(error);
+            error: function (index) {
+                console.log(index.results);
             }
         })
-    })
-    //to select languages
-    const langSelect = $("#lang")
-    langSelect.on('change', function (event) {
-        const langName = $(this).val()
-        console.log(spellname)
+    }
+    populateRaces()
+    //to get languages
+    function populateLang() {
         $.ajax({
             url: queryURL + "languages/",
             type: "GET",
-            success: function (result) {
-                console.log(result)
+            success: function (results) { 
+                console.log(results, results.length)
+                for(let i = 0; i < results.results.length; i++){
+                    console.log(results.results[i].name)
+                }
             },
-            error: function (error) {
-                console.log(error);
+            error: function (index) {
+                console.log(index.results);
             }
         })
-    })
-
+    }
+    populateLang()
 })
