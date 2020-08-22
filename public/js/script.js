@@ -1,7 +1,6 @@
 $(document).ready(function () {
     const queryURL = "https://www.dnd5eapi.co/api/";
     let classArray = []
-    console.log(classArray)
     let spellArray = []
     let raceArray = []
     let langArray = []
@@ -32,6 +31,7 @@ $(document).ready(function () {
         })
     }
     populateClass()
+
     //for spells
     function populateSpells() {
         $.ajax({
