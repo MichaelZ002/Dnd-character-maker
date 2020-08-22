@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = function (app) {
-  app.post("api/characters", (req, res) => {
+  app.post("/api/characters", (req, res) => {
     db.Character.create(req.body)
       .then((data) => {res.json(data)})
       .catch((err) => {throw err});

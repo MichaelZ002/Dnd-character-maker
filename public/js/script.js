@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log(`script.js loaded`)
   const queryURL = "https://www.dnd5eapi.co/api/";
   const classArray = [];
   const spellArray = [];
@@ -27,11 +28,10 @@ $(document).ready(function () {
     success: function (results) {
       for (let i = 0; i < results.results.length; i++) {
         classArray.push(results.results[i].name);
-        console.log(classArray);
+    
       }
     },
     error: function (index) {
-      console.log(index.results);
     },
   });
 
@@ -41,11 +41,9 @@ $(document).ready(function () {
     success: function (results) {
       for (let i = 0; i < results.results.length; i++) {
         spellArray.push(results.results[i].name);
-        console.log(spellArray);
       }
     },
     error: function (index) {
-      console.log(index.results);
     },
   });
 
@@ -55,11 +53,9 @@ $(document).ready(function () {
     success: function (results) {
       for (let i = 0; i < results.results.length; i++) {
         raceArray.push(results.results[i].name);
-        console.log(raceArray);
       }
     },
     error: function (index) {
-      console.log(index.results);
     },
   });
 
@@ -69,11 +65,9 @@ $(document).ready(function () {
     success: function (results) {
       for (let i = 0; i < results.results.length; i++) {
         langArray.push(results.results[i].name);
-        console.log(langArray);
       }
     },
     error: function (index) {
-      console.log(index.results);
     },
   });
 
@@ -109,5 +103,42 @@ $(document).ready(function () {
       }
 
     waitingme();
+
+  
+    $(".btn-floating").on("click", function(event) {
+      event.preventDefault()
+    console.log(`click heard`)
+      // make a newCharacter obj
+      let newCharacter = {
+        // name from name input
+        name: $("#name").val().trim(),
+        class: $("#class").val().trim(),
+        weapons: $("#spells").val().trim(),
+        race: $("#race").val().trim(),
+        primary_language: $("#lang").val().trim(),
+        height: $("#height").val().trim(),
+        age: $("#age").val().trim(),
+      };
+      console.log(newCharacter)
+    
+    
+      // send an AJAX POST-request with jQuery
+      $.ajax({
+        method: "POST",
+        url: "/api/characters",
+        data: newCharacter,
+        dataType: "json",
+      })      
+    
+      // empty each input box by replacing the value with an empty string
+      $("#name").val("");
+      $("#class").val("");
+      $("#spells").val("");
+      $("#race").val("");
+      $("#lang").val("");
+      $("#height").val("");
+      $("#age").val("");
+    });
+    
   
 });
